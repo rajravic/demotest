@@ -4,7 +4,6 @@ pipeline {
     stage('Build'){
       steps{
         echo 'Buliding the application'
-        sh buildflow.groovy
         }
     }
     stage("Test"){
