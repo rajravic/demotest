@@ -9,15 +9,15 @@ stages:
 - stage: Build
   jobs:
   - job: A1
-      steps:
-  -     bash: echo "Hello world"
+    steps:
+      - bash: echo "Hello world"
 
 
 - stage: Test
   jobs:
   - job: B1
-      steps:
-  -     bash: echo "Hello world"
+    steps:
+      - bash: echo "Hello world"
 
 
 
