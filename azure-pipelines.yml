@@ -11,13 +11,14 @@ stages:
   - job: A1
     steps:
       - bash: echo "Hello world"
-
-
+        displayName: Build Information
 - stage: Test
   jobs:
   - job: B1
     steps:
       - bash: echo "Hello world"
+        displayName: Build Information
+
 
 
 
