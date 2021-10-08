@@ -11,15 +11,10 @@ stages:
   - job: Build
       steps:
         bash: echo "Hello world"
-  - job: Test
-      steps:
-        bash: echo "Hello "
 - stage: Deploy
   jobs:
   - job: Build
       steps:
         bash: echo "Hello world"
-  - job: Test
-      steps:
-        bash: echo "Hello "
+
 
