@@ -6,9 +6,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
-- stage: A
+-stage: Build
   jobs:
-  - job: Build
+  - job: A
       steps:
         bash: echo "Hello world"
 - stage: Deploy
