@@ -13,7 +13,7 @@ stages:
         bash: echo "Hello world"
 - stage: Deploy
   jobs:
-  - job: Build
+  - job: B
       steps:
         bash: echo "Hello world"
 
