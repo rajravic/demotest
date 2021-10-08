@@ -4,6 +4,22 @@
 # https://aka.ms/yaml
 pool:
   vmImage: 'ubuntu-latest'
-steps:
-- bash: echo "Hello world"
+
+stages:
+- stage: A
+  jobs:
+  - job: Build
+      steps:
+      bash: echo "Hello world"
+  - job: Test
+      steps:
+      bash: echo "Hello "
+- stage: Deploy
+  jobs:
+  - job: Build
+      steps:
+      bash: echo "Hello world"
+  - job: Test
+      steps:
+      bash: echo "Hello "
 
