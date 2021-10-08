@@ -10,16 +10,16 @@ stages:
   jobs:
   - job: Build
       steps:
-      bash: echo "Hello world"
+        bash: echo "Hello world"
   - job: Test
       steps:
-      bash: echo "Hello "
+        bash: echo "Hello "
 - stage: Deploy
   jobs:
   - job: Build
       steps:
-      bash: echo "Hello world"
+        bash: echo "Hello world"
   - job: Test
       steps:
-      bash: echo "Hello "
+        bash: echo "Hello "
 
