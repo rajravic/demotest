@@ -16,13 +16,7 @@ stages:
 
   jobs:
   - job: B1
-    steps:
-    - task: ManualValidation@0
-      inputs:
-        notifyUsers: 'rajasekar14795@outlook.com'
-        instructions: 'Review'
-        onTimeout: 'resume'
-     
+    steps:     
     - bash: echo "Hello world"
 
 
