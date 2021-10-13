@@ -18,12 +18,10 @@ stages:
   - job: B1
     steps:
     - task: ManualValidation@0
-      timeoutInMinutes: 2 
       inputs:
-        notifyUsers: |
-          rajasekar14795@outlook.com          
-        instructions: 'Please validate the build configuration and resume'
-        onTimeout: 'resume'
+        notifyUsers: 'rajasekar14795@outlook.com'
+        instructions: 'Review'
+     
     - bash: echo "Hello world"
 
 
