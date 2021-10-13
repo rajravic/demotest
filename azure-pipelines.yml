@@ -21,6 +21,7 @@ stages:
       inputs:
         notifyUsers: 'rajasekar14795@outlook.com'
         instructions: 'Review'
+        onTimeout: 'resume'
      
     - bash: echo "Hello world"
 
