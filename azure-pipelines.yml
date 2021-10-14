@@ -27,10 +27,7 @@ stages:
       steps:
       - bash: echo "Hello world"
 
-- stage: Unit_Test
-  dependsOn:
-  - Deploy
-  - Build
+
 
     
 
