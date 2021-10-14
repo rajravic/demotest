@@ -10,8 +10,7 @@ stages:
   jobs:
     - job: A1
       steps:
-    - bash: echo "Hello world"
-  jobs:
+      - bash: echo "Hello world"
     - job: B1
       steps:     
       - bash: echo "Hello world"
@@ -20,12 +19,10 @@ stages:
   jobs:
     - job: A1
       steps:
-    - bash: echo "Hello world"
-  jobs:
+      - bash: echo "Hello world"
     - job: B1
       steps:     
       - bash: echo "Hello world"
-
 
 
 
