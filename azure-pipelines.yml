@@ -7,13 +7,15 @@ pool:
 
 stages:
 - stage: Build
+- task: CmdLine@2
+  inputs:
+    script: 'echo Write your commands here.'
   jobs:
   - job: A1
     steps:
       - bash: echo "Hello world"
         displayName: Build Information
 - stage: Test
-
   jobs:
   - job: B1
     steps:     
