@@ -1,37 +1,37 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-pool:
-  vmImage: 'ubuntu-latest'
-
 stages:
+  - stage: build_stage
+    dependsOn: []
+    pool:
+      vmimage: ubuntu-20.04
+    displayName:  Build Stage
+    jobs:
+      - job: Build
+        steps:
+          - script: |
+              echo "Build working"
+            displayName: Build 
+  - stage: Build_stage_connpack
+    dependsOn: []
+    pool:
+      vmimage: ubuntu-20.04
+    displayName: Build Stage connpack
+    jobs:
+      - job: Build_stage
+        steps:
+          - script: |
+              echo "Build ConnPack"
+            displayName: Build Connpack
 
-- stage: Test
-  jobs:
-    - job: A1
-      steps:
-      - bash: echo "Hello world"
-
-
-- stage: Build
-  jobs:
-    - job: A2
-      steps:
-      - bash: echo "Hello world"
-
-- stage: Deploy
-  dependsOn: Build
-  jobs:
-    - job: A3
-      steps:
-      - bash: echo "Hello world"
-
-
-
-    
-
-
-
-
-
+  - stage: Testing
+    dependsOn:
+      - Build_stage_connpack
+      - build_stage
+    pool:
+      vmimage: ubuntu-20.04
+    displayName: Testing
+    jobs:
+      - job: Tests
+        steps:
+          - script: |
+              echo "Testing"
+            displayName:  Testing
